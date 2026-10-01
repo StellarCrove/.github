@@ -1,0 +1,62 @@
+name: "🐛 Bug Report"
+description: "File a bug report for an issue in StellarCrove repositories"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please provide as much detail as possible to help reproduce and fix the bug.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of the StellarCrove ecosystem is affected?
+      options:
+        - "Smart Contracts (lumenforge-contracts)"
+        - "TypeScript SDK (lumenforge-sdk)"
+        - "CLI Tool (lumenforge CLI)"
+        - "Documentation (lumenforge-docs)"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the problem...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps or minimal code snippet to reproduce the behavior.
+      placeholder: |
+        1. Call contract method / SDK function with arguments...
+        2. Execute transaction...
+        3. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Output
+      description: Please copy and paste any relevant logs, terminal output, or stack traces.
+      render: shell
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Information
+      description: "Versions of relevant tools: Node.js version, Soroban SDK version, OS, etc."
+      value: |
+        - OS: 
+        - Node.js / Rust version: 
+        - Stellar network (e.g. testnet / local / futurenet / pubnet): 
