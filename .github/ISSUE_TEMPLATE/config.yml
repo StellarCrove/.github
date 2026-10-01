@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 LumenForge Ecosystem Documentation
+    url: https://github.com/StellarCrove/lumenforge-docs
+    about: Read architecture documents, security model, and integration guides.
+  - name: 🔒 Security Vulnerability Reporting
+    url: https://github.com/StellarCrove/lumenforge-contracts/security/advisories/new
+    about: Privately report a security vulnerability to the core engineering team.
