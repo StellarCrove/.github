@@ -1,0 +1,49 @@
+name: "✨ Feature Request / Enhancement"
+description: "Suggest a new feature or improvement for StellarCrove"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an enhancement! Please outline the motivation, user story, and expected behavior.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Target Component
+      description: Where should this feature be implemented?
+      options:
+        - "Smart Contracts (lumenforge-contracts)"
+        - "TypeScript SDK (lumenforge-sdk)"
+        - "CLI Tool (lumenforge CLI)"
+        - "Documentation (lumenforge-docs)"
+        - "Infrastructure & CI/CD"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement / Motivation
+      description: Is your feature request related to a problem or limitation?
+      placeholder: "A clear and concise description of the limitation or need..."
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution & API Design
+      description: Describe the solution you'd like to see and any proposed interfaces.
+      placeholder: "Function signatures, data structures, or CLI syntax..."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Contribution
+      options:
+        - label: "I am willing to submit a pull request implementing this feature."
